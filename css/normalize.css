@@ -231,6 +231,9 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  /*making images responsive*/
+  max-width: 100%;
+  height: auto;
 }
 
 /**
