@@ -16,14 +16,38 @@ function updateClock(data){
 
 function updateTime(date){
     var timeArt=document.getElementById('time');
-    var time = "Time for reference -----"+ date.getHours() + " : "
-        + date.getMinutes() + " : " + date.getSeconds();
-    timeArt.innerHTML = time;
-    
+    var hr;
+    var min;
+    var sec;
+    hr = date.getHours();
+    min = date.getMinutes();
+    sec= date.getSeconds();
+    if (hr.toString().length === 1){
+        hr = '0' + hr;
+    }
+    if (min.toString().length === 1){
+        min = '0' + min;
+    }
+    if (sec.toString().length === 1){
+        sec = '0' + sec;
+    }
+    var time = "Current Time -----"+ hr + " : "
+        + min+ " : " + sec;
+    timeArt.innerHTML = time;    
     //return timeArt;
 }
 
+
+
+
+
+
+
+
+
+
 //window.onload = setInterval;
+
 
 
 
