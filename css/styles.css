@@ -1,87 +1,59 @@
-/***************************
 
-/*Color List:
-- light blue = 00AEEF;
-- dark blue = 1C75BC
-- green = 8DC63F
-- dark green = 009444
-- orange = F7941E
-- dark orange = F15A29
-- brown = 594a42; 
 
-****************************
-Reset Styles
-****************************
-***************************/
 @import 'normalize.css';
 
-/* Change all elements to use border-box*/
-html{
-    box-sizing:border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-/***************************
-****************************
-Base Styles
-****************************
-***************************/
 body{
-    color:#414042;/*dark gey color*/
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
+    background: url('../images/bgimg2.jpg') no-repeat;
+    background-size: cover;
+    image-rendering:auto;
+    position: center;
 }
 
-h1, h2, h3{
+
+#current-time {
+    display: block;
     font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color:  #000;
+    border: 1px solid #ccccff;
+    border-radius: 20px;
+}
+ 
+#clock {
+    padding: 10px;
+    border:1px solid #000000;
+    border-radius:50%;
+    background: url('../images/analogue-img1.png');
 }
 
-a{
-    color:#8dc63f; /*lemon*/
-    font-weight: bold;
+#tz-select{
+    margin-top: 200px;
+    border-radius: 25px;
+    width:50%;
+    height:50px;
+    background-color:#ccc;
+    color:#fff;
+
 }
 
-a:hover{
-    text-decoration:underline;
+footer{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
 }
 
-/***************************
-****************************
-Layout Styles
-****************************
-***************************/
-.container{
-    padding-right:15px;
-    padding-left:15px;
-    margin-right:auto;
-    margin-left:auto;
-    max-width:1170px;
-}
 
-.row{
-    margin-right: -15px;
-    margin-left:-15px;
-}
-
-.row:after{
-    content:"";
-    display:table;
-    clear: both;
-}
-
-[class*='col-']{
-    width:100%;
-    padding-left:15px;
-    padding-right:15px;
-}
 
 
 @media(min-width:48em){
     [class*='col-']{
         float: left;
+    }
+    .col-1-1{
+        width:100%;
     }
 
     .col-1-3{
@@ -99,310 +71,4 @@ Layout Styles
     .pull-rigth-sm{
         float:right;
     }
-}
-/*Laying out the clock*/
-/*Styling the map starts here*/
-#map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
-
-      #infowindow-content .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
-      }
-
-      .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: Roboto;
-      }
-
-      #pac-container {
-        padding-bottom: 12px;
-        margin-right: 12px;
-      }
-
-      .pac-controls {
-        display: inline-block;
-        padding: 5px 11px;
-      }
-
-      .pac-controls label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-
-      #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
-
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
-
-      #title {
-        color: #fff;
-        background-color: #4d90fe;
-        font-size: 25px;
-        font-weight: 500;
-        padding: 6px 12px;
-      }
-      #target {
-        width: 345px;
-      }
-
-
-/*Table styles*/
-table, th, td {
-   border: 1px solid black;
-}
-
-table {
-    border-collapse: collapse;
-border: 1px solid black;
-width: 100%;
-}
-
-
-
-
-
-
-th {
-    height: 50px;
-    text-align: left;
-background-color: #4CAF50;
-    color: white;
-}
-
-td {
-    height: 50px;
-    vertical-align: bottom;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-border-bottom: 1px solid #ddd;
-}
-
-
-
-tr:hover {background-color: #f5f5f5}
-
-
-tr:nth-child(even) {background-color: #f2f2f2}
-
-
-/*Styling the map ends here*/
-:root{
-    --size:200px;
-}
-
-#clock{
-    width:var(--size);
-    height: var(--size);
-    background-color: #ccc;/*Grey*/
-    border:3px solid #000;
-    border-radius:50%;
-    box-shadow:0 0 10px 0 block;
-    position: relative;
-}
-
-#sec-Hand{
-    width:1px;
-    height:50%;
-    background-color:#000;
-    transform-origin :50% 80%;
-    position: absolute;
-    top:10%;
-    left:50%;
-    
-}
-
-#min-Hand{
-    width:3px;
-    height:40%;
-    background-color:blue;
-    transform-origin :50% 80%;
-    position: absolute;
-    top:18%;
-    left:50%;
-    margin-left:-1px;
-    
-}
-
-#hr-Hand{
-    width:5px;
-    height:25%;
-    background-color:red;
-    transform-origin :50% 80%;
-    position: absolute;
-    top:30%;
-    left:50%;
-    margin-left:-2px;
-    
-}
-
-.num{
-    height: var(--size);
-    position:absolute;
-    left:calc(50% - 0.5em);
-}
-
-.num div{
-    width:1em;
-    line-height:2em;
-    color: brown;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.num1{
-    transform: rotate(30deg);
-}
-.num1 div{
-    transform: rotate(-30deg);
-}
-
-.num2{
-    transform: rotate(60deg);
-}
-.num2 div{
-    transform: rotate(-60deg);
-}
-
-.num3{
-    transform: rotate(90deg);
-}
-.num3 div{
-    transform: rotate(-90deg);
-}
-
-.num4{
-    transform: rotate(120deg);
-}
-.num4 div{
-    transform: rotate(-120deg);
-}
-
-.num5{
-    transform: rotate(150deg);
-}
-.num5 div{
-    transform: rotate(-150deg);
-}
-
-.num6{
-    transform: rotate(180deg);
-}
-.num6 div{
-    transform: rotate(-180deg);
-}
-
-.num7{
-    transform: rotate(210deg);
-}
-.num7 div{
-    transform: rotate(-210deg);
-}
-
-.num8{
-    transform: rotate(240deg);
-}
-.num8 div{
-    transform: rotate(-240deg);
-}
-
-.num9{
-    transform: rotate(270deg);
-}
-.num9 div{
-    transform: rotate(-270deg);
-}
-
-.num10{
-    transform: rotate(300deg);
-}
-.num10 div{
-    transform: rotate(-300deg);
-}
-
-.num11{
-    transform: rotate(330deg);
-}
-.num11 div{
-    transform: rotate(-330deg);
-}
-
-.num12{
-    transform: rotate(360deg);
-}
-.num12 div{
-    transform: rotate(-360deg);
-}
-
-
-
-
-/*Small sized screen*/
-@media only scree and (max-width:47.9375em){
-    .remove-gutter-xs{
-        padding-left:0px;
-        padding-right: 0px;
-    }
-}
-/***************************
-****************************
-Module Styles
-****************************
-***************************/
-
-
-/***************************
-****************************
-Theme Styles
-****************************
-***************************/
-.background-primary{
-    background:#f7941e;/*Orange*/
-}
-
-.background-primary{
-    background:#00aeef;/*Bluee*/
-}
-
-.background-primary{
-    background:#8dc63f;/*Green*/
 }
