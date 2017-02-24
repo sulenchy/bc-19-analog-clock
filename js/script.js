@@ -14,9 +14,14 @@ $.get("https://api.timezonedb.com/v2/list-time-zone?key=H79S1HWQ6RGX&format=json
 
 	options += '<option value=' +(item.gmtOffset/3600) + ' ' + selected + '>' + item.zoneName + '</option>';
 	document.getElementById('tz-select').innerHTML = options;
-    //console.log(item.countryName);
+    console.log(item.countryName);
+    //populateTable(item);
 	});
 });
+
+
+
+
 
 function startTimer(){
 	setInterval(updateTime, 1000);
@@ -27,7 +32,7 @@ function updateTime() {
 	var dateData = new Date();
 	var offset_value = document.getElementById('tz-select').value-1;
 
-	let hr, mint;
+	var  hr, mint;
 // checking for float offset value
 	if (offset_value%1 !== 0){
 		let offset_vale = Math.floor(offset_value)
@@ -49,8 +54,10 @@ function updateTime() {
 	var location = '';
 
 //--- Digital clock setup ----//
-	var timeString = formatHour(hr) + ":" + padZero(mint) + ":" + padZero(secs) + " " + amPM(hr)  + " GMT: " +String(zone);
-	document.querySelector("#current-time").innerHTML = timeString;
+    var e = document.getElementById("tz-select");
+    var s = e.options[e.selectedIndex].text;
+	var timeString = 'Current Time(' + s + '): ' + formatHour(hr) + ":" + padZero(mint) + ":" + padZero(secs) + " " + amPM(hr);
+	document.querySelector("#current-time").innerHTML = timeString + '<br/>' + 'Time Zone: ' + " GMT " +String(zone);
 	
 // Pad in the initial zero to the minute and second display for 0 to 9 results
 	function padZero(numb) {

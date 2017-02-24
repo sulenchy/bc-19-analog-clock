@@ -3,7 +3,7 @@
 @import 'normalize.css';
 
 body{
-    background: url('../images/bgimg2.jpg') no-repeat;
+    background: url('../images/bgimg4.jpg') no-repeat;
     background-size: cover;
     image-rendering:auto;
     position: center;
@@ -16,7 +16,7 @@ body{
     text-align: center;
     margin-top: 50px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
     color:  #000;
     border: 1px solid #ccccff;
     border-radius: 20px;
@@ -34,8 +34,9 @@ body{
     border-radius: 25px;
     width:50%;
     height:50px;
-    background-color:#ccc;
-    color:#fff;
+    background-color:#fff;
+    color:#000;
+    font-size: 20px;
 
 }
 
@@ -45,7 +46,11 @@ footer{
     font-family: 'Orbitron', sans-serif;
 }
 
-
+a{
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
 
 
 @media(min-width:48em){
@@ -72,3 +77,9 @@ footer{
         float:right;
     }
 }
+
+
+
+
+
+

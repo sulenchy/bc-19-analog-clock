@@ -6,6 +6,8 @@
     <title>Analog Clock with Time Zones</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
     <link rel="icon" type="image/png" href="images/clock-favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -18,17 +20,23 @@
             <canvas id="clock" width="205" height="205">
             If you can see this message, your browser does not support canvas  and needs an update. Sorry. :(
         </canvas>
+        <br>
+        <br/>
+        <a href="#" ><em>Check the List of Timezones</em></a>
+        
         </article>
         
     </section>
+    
     <section id="time-zone" class="col-1-2">
+        <em>Select a Location</em>
         <select onchange="updateTime()" id ="tz-select"></select>
     </section>
     <footer class="col-1-1">
         <p>&copy Abudu Abiodun sulaiman @Andela Lagos</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    
+    
 </body>
 
 </html>
