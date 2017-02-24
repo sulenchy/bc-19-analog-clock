@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Analog Clock with Time Zones</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="css/AnimatedRibbon.css" type="text/css"/>
     <link rel="icon" type="image/png" href="Images/clock-favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
@@ -22,7 +23,11 @@
         </canvas>
         <br>
         <br/>
-        <a href="table.html" ><em>Check the List of Timezones</em></a>
+        <a href="table.html" >
+        <h2 class="ribbon">
+            <span class="ribbon-text">Check list of Time Zones here!</span>
+        </h2>
+        </a>
         
         </article>
         
@@ -30,6 +35,7 @@
     
     <section id="time-zone" class="col-1-2">
         <em>Select a Location</em>
+        
         <select onchange="updateTime()" id ="tz-select"></select>
     </section>
     <footer class="col-1-1">
