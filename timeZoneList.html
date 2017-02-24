@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Analog Clock with Time Zones</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/clock-favicon.png">
+    <script>
+          function myFunction() {
+          // Declare variables 
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            } 
+          }
+        }
+    </script>
+</head>
+<body>
+    <section>
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for TimeZoneName..">
+
+        <table id="myTable">
+            <tbody><tr class="header">
+                <th style="width:33.33%;">TimeZoneName</th>
+                <th style="width:33.33%;">Location</th>
+                <th style="width:33.33%;">Offset</th>
+            </tr>
+            <tr style="">
+                <td>Alpha Time Zone</td>
+                <td>Military</td>
+                <td>UTC +1</td><td>
+            </td></tr>
+            <tr>
+                <td>Australian Central Time</td>
+                <td>Australia</td>
+                <td>UTC +9.30/+10.30</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Eastern Daylight Time</td>
+                <td>Australia</td>
+                <td>UTC +11</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Eastern Daylight Time</td>
+                <td>Australia</td>
+                <td>UTC +11</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Eastern Standard Time</td>
+                <td>Australia</td>
+                <td>UTC +10</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Amazon Summer Time</td>
+                <td>South America</td>
+                <td>UTC -3</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Armenia Time</td>
+                <td>Asia</td>
+                <td>UTC +4</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Bravo Time Zone</td>
+                <td>Military</td>
+                <td>UTC +2</td><td>
+            </td></tr>
+            <tr>
+                <td>Central Africa Time</td>
+                <td>Africa</td>
+                <td>UTC +2</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Davies Time</td>
+                <td>Asia</td>
+                <td>UTC +4</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Eastern Time</td>
+                <td>North America<br>Caribbean<br>Central America</td>
+                <td>UTC -5/-4</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Fiji Time</td>
+                <td>Pacific</td>
+                <td>UTC +12</td><td>
+            </td></tr>
+            <tr style="">
+                <td>Greenwich Mean Time</td>
+                <td>Africa<br>Antartica<br>Europe<br>North America</td>
+                <td>UTC +0</td><td>
+            </td></tr>
+
+            </tbody>
+        </table>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
