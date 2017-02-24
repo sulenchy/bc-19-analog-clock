@@ -110,8 +110,8 @@ function updateTime() {
 	}
 
 			context.clearRect(0, 0, canvas.width, canvas.height);
-			drawArm(hr / 12, 10, 0.45, '#000000'); // Hour
-			drawArm(mint / 60,  4, 0.65, '#000000'); // Minute
+			drawArm(hr / 12, 10, 0.30, '#000000'); // Hour
+			drawArm(mint / 60,  4, 0.45, '#000000'); // Minute
 			drawArm(secs / 60,  2, 0.90, 'blue'); // Second
 }
 	
